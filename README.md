@@ -1,5 +1,6 @@
 # automated-reboot-cable-modem
 Automating the reboot of a cable modem should the internet be unreachable<br>
+<br>
 Requirements:
 <br>
 1) reboot_modem.sh bash script<br>
