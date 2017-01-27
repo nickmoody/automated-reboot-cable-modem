@@ -7,7 +7,7 @@
 #
 # REQUIRMENTS
 # 1) Logon Credentials for the APC PDU
-# 4) accompanying expect script found here: [INSERT LINK HERE]
+# 4) accompanying expect script found here: https://github.com/nickmoody/automated-reboot-cable-modem/blob/master/reboot_modem_exp
 #
 # CONFIGRATION OPTIONS
 # PDU
