@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
 # reboot_modem.exp
 # This script by default will connect to an APC PDU via telnet and reboot an outlet
-# This script should be executed by reboot_modem.sh found here: [INSERT LINK HERE]
+# This script should be executed by reboot_modem.sh found here: https://github.com/nickmoody/automated-reboot-cable-modem/blob/master/reboot_modem.sh
 # Author - Nick Moody - netassured.co.uk
 # Last Updated 11/01/2017
 #
