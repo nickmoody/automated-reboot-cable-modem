@@ -1,6 +1,7 @@
 # automated-reboot-cable-modem
 Automating the reboot of a cable modem should the internet be unreachable<br>
 <br>
+The scripts were tested with Ubuntu 16.04 and executed via a cron job.
 Requirements:
 <br>
 1) reboot_modem.sh bash script<br>
