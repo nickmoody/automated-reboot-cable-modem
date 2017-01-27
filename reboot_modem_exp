@@ -1,0 +1,42 @@
+#!/usr/bin/expect -f
+# reboot_modem.exp
+# This script by default will connect to an APC PDU via telnet and reboot an outlet
+# This script should be executed by reboot_modem.sh found here: [INSERT LINK HERE]
+# Author - Nick Moody - netassured.co.uk
+# Last Updated 11/01/2017
+#
+# Set variables
+set pdu_address [lindex $argv 0]
+set pdu_outlet [lindex $argv 1]
+set username [lindex $argv 2]
+set password [lindex $argv 3]
+#Turn off output to the screen
+# log_user 0
+# telnet to the pdu and reboot the outlet
+spawn telnet $pdu_address
+# Send credentials
+expect "User Name :" { send "$username\r" }
+expect "Password  :" { send "$password\r" }
+# Device manager
+expect "> " { send "1\r" }
+expect "> " { send "2\r" }
+# Outlet Control
+expect "> " { send "1\r" }
+# Outlet Number
+expect "> " { send "$pdu_outlet\r" }
+# Control Outlet
+expect "> " { send "1\r" }
+# Action
+expect "> " { send "3\r" }
+# Accept Action
+expect "cancel : " { send "YES\r" }
+# Send escape commands to exit to main menu
+expect "..." { send "\r" }
+expect "> " { send \033 }
+expect "> " { send \033 }
+expect "> " { send \033 }
+expect "> " { send \033 }
+expect "> " { send \033 }
+# And Log out
+expect "> " { send "4\r" }
+exit
